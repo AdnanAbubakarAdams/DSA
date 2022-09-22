@@ -41,3 +41,12 @@ let and const are the new modern ways of doing the same thing, variables declare
 
 3. WITHIN A FUNCTION, WHAT IS THE DIFFERENCE BETWEEN RETURN AND CONSOLE.LOG
 console.log is a function in javascript and return is a keyword. console.log is used to debug/print information to the console. Return on the other hand is a call to pass the value where the call was made console.log is not going to stop the execution while return stops the execution and return the specific value.
+
+
+MATH FOR DEVELOPERS
+Integer: a whole number that is not a fraction
+Float/Floating point: approximate value for a decimal/fraction, as calculated by a computer
+Positive number: greater than zero
+Negative: less than zero
+Non-negative: greater than or equal to zero
+

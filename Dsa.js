@@ -143,3 +143,62 @@ console.log(printPrimes(6));
 //   };
   
 //   console.log(printPrimes(30));
+
+// MATH FOR DEVELOPERS // MATH BASICS
+
+// NAN- Not a number
+// NAN is the value you get when you try to do a mathematical operation on things that are not a number.
+// Remember, you can add strings together with the + operator. that is how we concatenate strings. So this operator has a dual function, adding numbers and concatenating strings.
+let start = "Hello, ";
+let introduce = "my name is ";
+let name = "E.T.";
+let expression = start + introduce + name;
+
+console.log(expression);
+
+let ductTapePrice = 5;
+let amountOfDuctTape = 4;
+let percentage = 0.1;
+let getDiscountedTotal = 1 - percentage;
+
+let total = ductTapePrice * amountOfDuctTape;
+if (amountOfDuctTape >= 3) {
+  total *= getDiscountedTotal;
+}
+
+console.log(total);
+
+// MATH METHODS
+let ourPrice = 5;
+let competitorPrices = [2, 3, 4, 6, 7, 8];
+
+const comparePriceRange = (prices) => {
+  let min = Math.min(...prices);
+  let max = Math.max(...prices);
+  let priceRange = max - min;
+
+  return priceRange;
+};
+
+console.log(comparePriceRange(competitorPrices));
+
+// COMPETITOR PRICES
+// const bestPrice = (competitorPrices, ourPrice) => {
+//   let competitorMin = Math.min(...competitorPrices);
+//   return competitorMin - ourPrice;
+// };
+
+// console.log(bestPrice(competitorPrices, ourPrice));
+
+const bestPrice = (competitorPrices, ourPrice) => {
+  let competitorMin = Math.min(...competitorPrices);
+  let difference = competitorMin - ourPrice;
+  console.log(difference);
+  if (difference < 0) {
+    console.log("the competitor has a better price");
+  } else {
+    console.log("we have the better price");
+  } 
+  return difference;
+}
+console.log(bestPrice(competitorPrices, ourPrice))
