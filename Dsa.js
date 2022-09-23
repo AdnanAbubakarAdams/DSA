@@ -190,15 +190,104 @@ console.log(comparePriceRange(competitorPrices));
 
 // console.log(bestPrice(competitorPrices, ourPrice));
 
+// const bestPrice = (competitorPrices, ourPrice) => {
+//   let competitorMin = Math.min(...competitorPrices);
+//   let difference = competitorMin - ourPrice;
+//   console.log(difference);
+//   if (difference < 0) {
+//     console.log("the competitor has a better price");
+//   } else {
+//     console.log("we have the better price");
+//   } 
+//   return `The price difference is ${difference}`;
+// }
+// console.log(bestPrice(competitorPrices, ourPrice)) ---->
+
+// Doing the same thing with a built in math method math.abs..The Math.abs() function returns the absolute value of a number.// also know as absolute value
+
 const bestPrice = (competitorPrices, ourPrice) => {
-  let competitorMin = Math.min(...competitorPrices);
-  let difference = competitorMin - ourPrice;
-  console.log(difference);
-  if (difference < 0) {
-    console.log("the competitor has a better price");
+   let competitorMin = Math.min(...competitorPrices);
+   let difference = competitorMin - ourPrice;
+   if (difference < 0) {
+    console.log("competitors price is better than our price")
+   } else {
+    console.log("We have the best price");
+   }
+   return `The price difference is ${Math.abs(difference)}`;// 3
+};
+console.log(bestPrice(competitorPrices, ourPrice));
+
+// Math.round()
+// let cartTotal = 26.41;
+// let roundedUpCart = Math.round(cartTotal);
+// console.log(roundedUpCart); // 26
+
+// Math.ceil
+// let cartTotal = 26.41;
+// let roundedUpCart = Math.ceil(cartTotal);
+// console.log(roundedUpCart);
+
+
+let cartTotal = 26.41;
+let roundedUpCart = Math.ceil(cartTotal)
+let donation = (roundedUpCart - cartTotal).toFixed(2);
+console.log(donation);
+
+
+
+const arrayOfNums = [70, 111, 450, 3];
+
+console.log(arrayOfNums.sort());// [ 111, 3, 450, 70 ]
+
+
+// const nums = [
+//   14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+//   17, 12, 71, 18, 15, 12,
+// ];
+
+// const findTheMedian = (numArray) => {
+//   return numArray.sort();
+// };
+
+// console.log(findTheMedian(nums));
+
+
+const shortArray = ["first", "middle", "last"];
+
+// always rounds to the nearest integer
+console.log([Math.ceil(shortArray.length/2)])
+console.log(shortArray[2])
+
+// usually rounds down or up to the nearest integer
+console.log([Math.round(shortArray.length/2)])
+
+// always rounds down
+console.log([Math.floor(shortArray.length/2)])
+
+const shortArray2 = [1, 2, 4, 5];
+
+const firstNum = shortArray2[Math.floor(shortArray2.length / 2) - 1];
+const secondNum = shortArray2[Math.ceil(shortArray2.length / 2)];
+const average = (firstNum + secondNum) / 2;
+console.log(firstNum, secondNum, average);
+
+
+// finding the median 
+const nums = [
+  14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+  17, 12, 71, 18, 15, 12,
+];
+
+const findTheMedian = (numArray) => {
+  numArray.sort();
+  if (numArray.length % 2 !== 0) {
+    return Math.round(numArray.length / 2);
   } else {
-    console.log("we have the better price");
-  } 
-  return difference;
-}
-console.log(bestPrice(competitorPrices, ourPrice))
+    const firstNum = numArray[Math.round(numArray.length / 2) - 1];
+    const secondNum = numArray[Math.round(numArray.length / 2)];
+    const average = (firstNum + secondNum) / 2;
+    return average;
+  }
+};
+
+console.log(findTheMedian(nums));
