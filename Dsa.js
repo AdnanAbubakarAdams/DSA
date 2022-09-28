@@ -291,3 +291,28 @@ const findTheMedian = (numArray) => {
 };
 
 console.log(findTheMedian(nums));
+
+// STRINGS AND REGULAR EXPRESSIONS
+
+
+
+/* must know string methods
+charCodeAt - returns the character code (video introduction) for a character in a string
+fromCharCode - returns the letter/character from the unicode value
+includes - case sensitive search for a set of characters in a string, returns true or false
+indexOf - finds the index of a character
+padEnd - adds whitespace to the end of a string
+padStart - adds whitespace to the beginning of a string
+repeat - repeats a string, by the value given
+slice - returns a portion of a string, based on position
+substring - returns a portion o a string, based on length
+toString - converts other data types (i.e. numbers) to strings
+trim - removes whitespace from the ends of a string
+JSON.stringify() - converts JSON to a string
+
+Regular Expression methods
+
+search - searches for a specified value and returns the position
+match - looks for a match, returns true/false
+replace - replaces a value
+*/
