@@ -66,3 +66,91 @@ const vendingMachine = {
   
   vendingMachine.vend(1);
 
+  //When we make a new class and add properties inside of the constructor, we use this to be sure we are referencing the properties inside this class.
+
+// MAKING INSTANCES OF CLASS CUSTOMIZABLE AND SETTING DEFAULT VALUES
+class Animal {
+    constructor(name, type, color, walkStyle, isFriendly = true) {
+      this.name = name;
+      this.type = type;
+      this.age = 4;
+      this.color = color;
+      this.isFriendly = isFriendly;
+      this.walkStyle = walkStyle || "Walka, walka";// USING SHORT CIRCUTING OR TERNARY HERE ALSO WORKS FINE
+    }
+    walk() {
+      console.log(this.walkStyle);
+    }
+    greet(otherBeing) {
+      console.log(`Sniff sniff, ${otherBeing}`);
+    }
+  }
+  const buttons = new Animal("Buttons", "turtle", "green");
+  const fluffy = new Animal("Fluffy", "cat", "calico", "Strut, strut", false);
+  const marshmallow = new Animal(
+    "Marshmallow",
+    "miniature horse",
+    "white",
+    "Clip clop, clip clop"
+  );
+  
+  console.log(buttons);
+  console.log(fluffy);
+  console.log(marshmallow);
+
+  class Animal {
+    constructor(name, type, color, walkStyle, isFriendly = true) {
+      this.name = name;
+      this._type = type;
+      this.age = 4;
+      this.color = color;
+      this.isFriendly = isFriendly;
+      this.walkStyle = walkStyle || "Walka, walka";
+    }
+    walk() {
+      console.log(this.walkStyle);
+    }
+    greet(otherBeing) {
+      console.log(`Sniff sniff, ${otherBeing}`);
+    }
+    ageUp() {
+      this.age++;
+    }
+  }
+  const buttons = new Animal("Buttons", "turtle", "green");
+  const fluffy = new Animal("Fluffy", "cat", "calico", "Strut, strut", false);
+  const marshmallow = new Animal("Marshmallow", "miniature horse", "white");
+  
+  buttons.ageUp();
+  console.log(buttons);
+  console.log(buttons._type);
+
+  class Animal {
+    constructor(name, type, color, walkStyle, isFriendly = true) {
+      this.name = name;
+      this._type = type;
+      this.age = 4;
+      this.color = color;
+      this.isFriendly = isFriendly;
+      this.walkStyle = walkStyle || "Walka, walka";
+    }
+    walk() {
+      console.log("Clip clop, clip clop");
+    }
+    greet(otherBeing) {
+      console.log(`Sniff sniff, ${otherBeing}`);
+    }
+    // objects interacting with other objects
+    classyGreeting(otherClassyBeing) {
+      console.log(`Howdy ${otherClassyBeing.name}`);
+    }
+    ageUp() {
+      this.age++;
+    }
+  }
+  const buttons = new Animal("Buttons", "turtle", "green");
+  const fluffy = new Animal("Fluffy", "cat", "calico", "Strut, strut", false);
+  const marshmallow = new Animal("Marshmallow", "miniature horse", "white");
+  
+  buttons.classyGreeting(marshmallow);
+  marshmallow.classyGreeting(buttons);
