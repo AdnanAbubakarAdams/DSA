@@ -1,0 +1,117 @@
+What is the difference between an parameter and and argument?
+ANSWER: A parameter is one of the variables in a function usaully passed in as placeholder for the later argument. And when a method is called, the arguments are the data you pass into the method's parameters.
+
+What is the difference between var, const, and let?
+ANSWER: var: The var keyword declares a function-scoped or global variable, optionally initializing it to a value.
+Function-scoped means that the variable is only available within the function it was declared in. Global variables are available throughout your entire code.
+let: The let keyword declares a block-scoped local variable, optionally initializing it to a value.
+Block-scoped means that the variable is only available within the block it was declared in, which is usually denoted by curly braces {}.
+const: The const keyword declares a block-scoped, immutable constant variable, i.e. a variable that can’t be reassigned.
+
+Within a function, what is the difference between return and console.log()?
+ANSWER: The return value of a function is often saved for reuse just we reuse a variable while a console.log is used to print the values of anything including the return values of function into the debugging or browser terminal.
+
+What is a code block? 
+ANSWER: Its the block usually denoted with curly brackets the usually scopes some logic or variables and so one
+
+What is the difference between =, ==, and ===  ?
+ANSWER: The main difference between the == and === operator in javascript is that the == operator does the type conversion of the operands before comparison, whereas the === operator compares the values as well as the data types of the operands.
+
+What is NaN?
+ANSWER: Means not a number..NaN is not equal to NaN! Short Story: According to IEEE 754 specifications any operation performed on NaN values should yield a false value or should raise an error
+
+Is NaN == NaN true or false, why?	
+ANSWER: False According to IEEE 754 specifications any operation performed on NaN values should yield a false value or should raise an error
+
+Is 'McDonalds' > 'Burger King' - true, false or an error? Why?	
+ANSWER: its is going to return true cos according to the UTF-8 codes of the letter m is greater than that of the letter b.
+
+What are the differences between a single quote, double quote, smart quote, and backtick?	
+ANSWER: As you may have understood now, there is no real difference between using single quotes, double quotes, or backticks. You can choose one or multiple styles based on your preference. However, It is always good to stick to a single format throughout the project to keep it neat and consistent. They can not be mixed together and also backticks have one special case of being used for template literals or interpolations.
+
+
+What is the difference between a and 'a' in JavaScript?	
+ANSWER: 
+
+
+What is the difference between a function declaration and a function expression?	
+ANSWER: The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions.
+
+
+What is one difference between an arrow function and a function declaration?	
+ANSWER: Arrow function — also called fat arrow function— is a new feature introduced in ES6 that is a more concise syntax for writing function expressions
+
+
+Can a function expression be an anonymous function?
+ANSWER: YES function expressions are usually anonymous
+
+Can a function declaration be an anonymous function?
+ANSWER: NO cos a function needs atleast a name to be declared or defined
+
+
+
+Is an arrow function a function declaration or function expression?
+ANSWER: its a function declaration or a little bit of both. can be or is used to declare functions as well also use in expression such as anonymous functions
+
+
+What is the first index position of an array in JS?	
+ANSWER: zero index [0]
+
+What is a primitive data type?	
+ANSWER: In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties. There are 7 primitive data types:
+string number bigint boolean undefined symbol null
+
+Difference between Premitive data types and Reference data types ?
+ANSWER: Primitive types include the following data types: undefined, null, string, number, boolean, bigint, and symbol. All other data types are reference types. This includes objects and arrays, as well as functions, maps, sets, and more.
+Primitive and reference types differ in that primitive types are immutable while reference types are mutable. This means that primitive types, once created, cannot be changed although they can be copied. Reference types, on the other hand, can be changed.
+
+
+What is the difference between: for (let i = 0; i < 5; i++) and for (i = 0; i < 5; i++ )?
+ANSWER: the first one is the right way of writing a loop while the second isnt since the index or i isnt declared in the second one which will not let it function or work
+
+What is a higher order function?	
+ANSWER: Basically, a function which takes another function as an argument or returns a function is known as a higher order function.
+
+What is a callback function?	
+ANSWER: Is a function that is passed into another function either as an  argument or ....
+
+
+What is the spread/rest ... operator? What does it do?	
+ANSWER: Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element.
+
+
+What is the difference between 1000 and 1_000?	
+ANSWER: The underScore is there to act as seperator between 1000s just like we use comma's in real time to seperate them
+
+
+What does parseInt() do?	
+ANSWER: The parseInt function converts its first argument to a string, parses that string, then returns an integer or NaN
+
+
+What does parseFloat() do?	
+ANSWER: function parses a string argument and returns a floating point number.
+
+What does Number() do?	
+ANSWER: The Number() method converts a value to a number. If the value cannot be converted, NaN is returned.
+
+What does isNaN() do?	
+ANSWER: The isNaN() method returns true if a value is NaN. The method converts the value to a number before testing it.
+
+
+In JavaScript ?. is the symbol for optional chaining. What is optional chaining and where/when would you use it?	
+ANSWER: Optional chaining (?.) The optional chaining operator ( ?. ) accesses an object's property or calls a function. If the object is undefined or null , it returns undefined instead of throwing an error
+
+
+In JavaScript, what does the keyword static inside of a class do?	
+ANSWER: The static keyword defines a static method or property for a class, or a class static initialization block (see the link for more information about this usage). Neither static methods nor static properties can be called on instances of the class. Instead, they're called on the class itself.
+
+
+Why would we use the keyword static? What problem does it solve?	
+ANSWER: The most important reason why static keywords are heavily used in Java is to efficiently manage memory.
+
+
+
+
+
+
+

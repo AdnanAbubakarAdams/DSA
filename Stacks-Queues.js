@@ -91,11 +91,14 @@ stack.pop();
 
 
 // HACKER RANK YOUTUBE
-const nums = [1,2,3,4,5,6,7,8,9]
+// const nums = [1,2,3,4,5,6,7,8,9]
 class Queues {
     constructor(data) {
-        this.data = data;
-        this.next = null;
+        // this.data = data;
+        // this.next = null;
+        this.storage ={}
+        this.head = 0;
+        this.tail = 0;
     }
 
     // METHODS add to tail and remove from head
@@ -106,12 +109,33 @@ class Queues {
         return this.head ? true : false;
     }
     // CHECK THE PEAK ITEM IN THE QUEUE OR THE 1ST IN LINE
-    peak() {
-     return this.data[0] 
+    peek() {
+     return 
     }
 
 }
-const queue = new Queues(nums);
+const queue = new Queues();
 
 console.log(queue.isEmpty())
-console.log(queue.peak())
+console.log(queue.peek())
+
+
+
+
+
+// const removeAdjacentDuplicates = (str) => {
+//     let strArr = str.split("")
+//     let goAgain = true
+  
+//     while (goAgain) {
+//       let found = false
+//       for (let i = 0; i < strArr.length; i++) {
+//         if (strArr[i] === strArr[i + 1]) {
+//           strArr.splice([i], 2) 
+//           found = true
+//         }
+//       }
+//       goAgain = found
+//     }
+//     return strArr.join("")
+//   }
