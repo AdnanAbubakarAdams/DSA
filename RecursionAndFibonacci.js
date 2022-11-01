@@ -72,3 +72,15 @@ const factorial = (n) => {
   }
 };
 console.log(factorial(4));
+
+// Fibonacci sequence
+const fibonacci = (num) => {
+  // see if you can solve this using memoization <---
+  // base case
+  if (num <= 1) {
+    return 1;
+  }
+  return fibonacci(num - 1) + fibonacci(num - 2);
+};
+
+console.log(fibonacci(6));
